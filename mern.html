@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mern.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery.ui.touch-punch.min.js"></script>
+   
+   <script>
+    var count = 0;
+    $(function () {
+            $("#drag").draggable({
+                    containment: "#sidebar",
+                    // start: function () {
+                    //         $("#drag p").html("<p>Drag me around</p>Drag started!");
+                    // },
+                    drag: function () {
+                            count++;
+                            $("#info").html("Drag event fired " + count + " times");
+                    },
+                    // stop: function () {
+                    //         $("#drag p").html("<p>Drag me around</p>Drag stopped!");
+                    // }
+            });
+    });  
+    </script>
+   
+
+ 
+<div  class="container">
+
+<!-- Sidebar first component -->
+
+<div id="sidebar" >
+    <div id="drag" class="drag">
+        <!-- <p4 id="p">MIT</p> -->
+        <marquee  id='mar' behavior="alternate" direction="right">University Portal</marquee>
+    </div>    
+    <h1  id="stext"></h1>
+    <!-- <button class="btn btn-primary" onClick="location.href='/data.html'" type="button">Register Data</button> -->
+    <!-- <button onClick="location.href='data.html'" type="button">Click Here</button> -->
+    <!-- <img src="https://alum.mit.edu/sites/default/files/styles/article_desktop/public/images/USnews_edit.jpg?h=aa536ee0&itok=6SwibLLQ" alt="aa" width="400" height="300"> -->
+    <div id="info" class="info">Drag event fired 0 times</div> 
+</div>
+
+<!-- Content second component -->
+
+<div id ="content" >
+    <h1 id="ctext">Registration</h1>
+    <img id="photo" src="https://d.newsweek.com/en/full/501483/oxford-university.jpg" alt="aa" width="400" height="300"> 
+    <button class="btn btn-primary" onClick="location.href='/data.html'" type="button">Register Data</button>
+</div>
+
+
+<!-- Footer is third component -->
+
+<div id ="footer"><h6 id="ftext">2022 Copyright @AhmadBakhtiyar</h6> 
+</div>
+
+
+
+</div>
+
+
+
+<body>
+    
+</body>
+</html>
